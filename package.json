@@ -1,0 +1,24 @@
+{
+  "name": "caspar-cli",
+  "version": "1.0.0",
+  "description": "学习使用脚手架",
+  "main": "index.js",
+  "author": "caspar",
+  "license": "MIT",
+  "devDependencies": {
+    "co": "^4.6.0",
+    "co-prompt": "^1.0.0"
+  },
+  "bin": {
+    "caspar": "index.js"
+  },
+  "dependencies": {
+    "commander": "^2.18.0",
+    "download-git-repo": "^1.1.0",
+    "handlebars": "^4.0.12",
+    "inquirer": "^6.2.0",
+    "log-symbols": "^2.2.0",
+    "ora": "^3.0.0",
+    "chalk": "^2.4.1"
+  }
+}
