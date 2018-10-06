@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 let program = require('commander');
 let inquirer = require('inquirer');
-let package = require('./package.json');
+let pack = require('./package.json');
 let download = require('download-git-repo');
 //var exec = require('child_process').exec;
 const fs = require('fs');
@@ -12,7 +12,11 @@ const symbols = require('log-symbols'); // 成功,失败图标
 
 
 program
-    .version(package.version, '-v --version')
+    .version(pack.version, '-v --version')
+
+
+
+program
     .command('init <name>')
     .description('初始化一个项目')
     .action(function(name){
@@ -66,3 +70,7 @@ program
     })
 
 program.parse(process.argv);
+if (program.args.length == 0) {
+    //这里是处理默认没有输入参数或者命令的时候，显示help信息
+    program.help();
+}
