@@ -35,7 +35,7 @@ program
             ]).then(function (answer) {
                 const spinner = ora('正在下载模板...');
                 spinner.start();
-                download('casparwan/xiaofan', name, (err) => {
+                download('casparwan/crm-ershouche', name, (err) => {
                     if (err) {
                         spinner.fail();
                         console.log(symbols.error, chalk.red(err));
